@@ -17,7 +17,7 @@ These files are usable as copyable instructions, but have not yet been verified 
 
 - End-to-end testing and improved setup across platforms, including actual file read/write and user-approved integrations.
 - A working fitness tracker and private dashboard; the current files are guidance, not functional applications.
-- Isa and Noah coach options and a reviewed public exercise demo library. Draft source videos and GIFs are held privately; inclusion requires version-specific review and appropriate rights.
+- Expanded Isa and Noah coach options with visual assets, and a reviewed public exercise demo library. Basic fictional coach-name instructions are available. Draft source videos and GIFs are held privately; inclusion requires version-specific review and appropriate rights.
 - Additional exercise GIFs and stretches after source footage, movement variants and review status are established.
 - Richer assistant workflows, examples, knowledge templates and tested integrations.
 - Walkthrough videos, GitHub Projects and expanded contributor documentation.
