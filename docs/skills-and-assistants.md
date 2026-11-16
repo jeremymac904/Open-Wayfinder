@@ -39,3 +39,7 @@ Use the [coach persona](../persona/PERSONA.md) first; add the skill instructions
 ## Platform setup
 
 [ChatGPT](../adapters/chatgpt.md) · [Claude](../adapters/claude.md) · [Gemini](../adapters/gemini.md) · [Cursor](../adapters/cursor.md) · [Microsoft 365 Copilot](../adapters/microsoft-copilot.md) · [Local models](../adapters/local-models.md) · [Platform capability guide](platform-connectors.md)
+
+## Coach choices and templates
+
+[Isa](../coaches/isa.md) · [Noah](../coaches/noah.md) · [Workout log](../templates/workout-log.md) · [Weekly review](../templates/weekly-review.md) · [Personal playbook](../templates/personal-playbook.md)
