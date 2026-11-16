@@ -47,3 +47,7 @@ Use the [coach persona](../persona/PERSONA.md) first; add the skill instructions
 ## Offline workout tracker
 
 [Use the local tracker](../tools/workout-tracker/README.md) to log workouts and export backups. It is independent of the AI prompts and stores entries in your browser on that device.
+
+## Offline check-in dashboard
+
+[Use the check-in dashboard](../tools/check-in-dashboard/README.md) to review your own mood, energy, stress, connection and confidence across 7, 14 or 30 days. It is separate from the workout tracker and the AI prompts.
