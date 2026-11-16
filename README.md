@@ -37,7 +37,7 @@ You choose your platform, your goals and what you share. Your coach should work 
 ## Get started in two steps
 
 1. Open [Get started](docs/getting-started.md), choose your AI platform, and copy the coach instructions into a new conversation or its custom-instructions area.
-2. Tell your coach: **“Help me set up Open Wayfinder. Start with one question.”**
+2. Copy the [onboarding guide](skills/onboarding/SKILL.md) into the same conversation, then tell your coach: **“Help me set up Open Wayfinder. Start with one question.”**
 
 Want a business assistant? Copy the [assistant builder instructions](skills/business-assistant-builder/SKILL.md) into a conversation and describe what you do.
 
