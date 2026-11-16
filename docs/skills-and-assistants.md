@@ -36,6 +36,10 @@ Use the [coach persona](../persona/PERSONA.md) first; add the skill instructions
 - [research](../assistants/research.md)
 - [Build a custom assistant](../skills/business-assistant-builder/SKILL.md)
 
+## Persona and visual guides
+
+[Character bible](../skills/character-bible/SKILL.md) · [Image bible](../skills/image-bible/SKILL.md) · [Personal images](../skills/personal-images/SKILL.md) · [Professional persona](../skills/professional-persona/SKILL.md)
+
 ## Platform setup
 
 [ChatGPT](../adapters/chatgpt.md) · [Claude](../adapters/claude.md) · [Gemini](../adapters/gemini.md) · [Cursor](../adapters/cursor.md) · [Microsoft 365 Copilot](../adapters/microsoft-copilot.md) · [Local models](../adapters/local-models.md) · [Platform capability guide](platform-connectors.md)
