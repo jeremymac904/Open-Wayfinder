@@ -16,3 +16,7 @@ Use the [personal coach persona](../../persona/PERSONA.md). Ask one or two quest
 ## Output and privacy
 
 Provide a brief, actionable response and ask if the user wants a private record. Use only confirmed information. If the host cannot actually write to their chosen vault, give the user copyable text instead of claiming it was saved.
+
+## Offline tracker
+
+The [workout tracker](../../tools/workout-tracker/README.md) is a separate local HTML tool. It records user-entered movements and can export or import a JSON backup. It does not connect to the coach automatically.
