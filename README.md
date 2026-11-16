@@ -64,4 +64,4 @@ Found a problem or have an idea? [Open an issue](../../issues) and tell us what 
 
 Created by **Jeremy McDonald** to make useful AI coaching and assistance more accessible.
 
-**License:** The project is intended to be free and open source; a license has not yet been selected. Until a license is added, do not assume permission to redistribute or modify the repository's contents.
+**License:** Open Wayfinder is available under the [MIT License](LICENSE).
