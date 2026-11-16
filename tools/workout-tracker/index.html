@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Open Wayfinder | Workout tracker</title>
+<style>
+body{font:16px/1.5 system-ui,sans-serif;background:#101b23;color:#eef6f6;margin:0}
+main{max-width:900px;margin:auto;padding:1.5rem}h1{margin-bottom:.25rem}p{color:#c4d5d7}
+.card{background:#1a2b34;border:1px solid #31505a;border-radius:14px;padding:1.2rem;margin:1.2rem 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.8rem}
+label{display:block;font-weight:600}input,select,textarea,button{font:inherit;box-sizing:border-box;border-radius:7px;padding:.55rem}
+input,select,textarea{width:100%;border:1px solid #55737b;background:#f8ffff;color:#15292b}
+button{cursor:pointer;background:#45d9c7;border:0;color:#07252a;font-weight:700;margin:.5rem .4rem 0 0}
+.secondary{background:#dceceb}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:.5rem;border-bottom:1px solid #43616a;overflow-wrap:anywhere}
+.scroll{overflow:auto}small{color:#bfd2d3}#message{min-height:1.5em;color:#a8f0e5}
+</style></head>
+<body><main><h1>Workout tracker</h1><p>Record what you did. Keep your data on this device.</p>
+<div class="card"><strong>Your data stays in this browser's local storage.</strong> It is not encrypted, synced or backed up by this tool; clearing browser data may erase it. Export a backup and use a private device. Avoid sensitive notes on shared computers.</div>
+<form id="entryForm" class="card"><h2>Add a movement</h2>
+<div class="grid">
+<label>Date<input name="date" type="date" required></label>
+<label>Exercise<input name="exercise" required maxlength="160" placeholder="e.g. dumbbell row"></label>
+<label>Sets<input name="sets" type="number" min="1" max="100" required></label>
+<label>Reps per set<input name="reps" type="number" min="1" max="1000" required></label>
+<label>Weight<input name="weight" type="number" step="any" min="0" max="100000" required></label>
+<label>Unit<select name="unit"><option>lb</option><option>kg</option></select></label>
+<label>Load<select name="loadType"><option>per hand</option><option>total</option><option>bodyweight</option></select></label>
+</div><label>Notes (optional)<textarea name="notes" maxlength="2000" rows="2"></textarea></label>
+<button type="submit">Save entry</button></form>
+<p id="message" role="status" aria-live="polite"></p>
+<section class="card"><h2>Your entries</h2><p id="count"></p><div class="scroll"><table><thead><tr><th>Date</th><th>Movement</th><th>Work</th><th>Load</th><th>Notes</th><th>Action</th></tr></thead><tbody id="entries"></tbody></table></div>
+<button id="export" type="button">Export backup</button><label for="import">Restore backup (replaces current entries after confirmation)</label><input id="import" type="file" accept=".json,application/json"><button class="secondary" id="clear" type="button">Delete all entries</button></section>
+<p><small>This is a simple log, not medical guidance. Stop if you experience concerning symptoms and seek appropriate help.</small></p></main>
+<script src="tracker-core.js"></script>
+<script>
+(() => {
+  const core=window.WayfinderTracker, key='open-wayfinder-workout-v1', form=document.getElementById('entryForm');
+  const msg=document.getElementById('message'), body=document.getElementById('entries'), count=document.getElementById('count');
+  let entries=[];
+  function note(t){msg.textContent=t;}
+  function load(){try{const data=localStorage.getItem(key);entries=data?core.readExport(data).entries:[];}catch(e){entries=[];note('Could not read local data. Check browser settings or restore a backup.');}}
+  function persist(next){try{localStorage.setItem(key,core.exportData(next));entries=next;render();return true;}catch(e){note('Could not save. Check storage permissions or free space; your existing entries were not intentionally changed.');return false;}}
+  function render(){body.replaceChildren();count.textContent=entries.length+' recorded movements';entries.forEach((e,i)=>{const row=document.createElement('tr');[e.date,e.exercise,e.sets+' × '+e.reps,e.weight+' '+e.unit+' ('+e.loadType+')',e.notes].forEach(v=>{const cell=document.createElement('td');cell.textContent=v;row.appendChild(cell)});const cell=document.createElement('td'),b=document.createElement('button');b.type='button';b.className='secondary';b.textContent='Delete';b.setAttribute('aria-label','Delete '+e.exercise+' on '+e.date);b.onclick=()=>{if(confirm('Delete this entry?')&&persist(core.removeEntry(entries,i)))note('Entry deleted.')};cell.appendChild(b);row.appendChild(cell);body.appendChild(row);});}
+  form.addEventListener('submit',ev=>{ev.preventDefault();try{const data=Object.fromEntries(new FormData(form));const e=core.makeEntry(data);if(persist([...entries,e])){form.reset();note('Entry saved on this device.');}}catch(e){note(e.message);}});
+  document.getElementById('export').onclick=()=>{try{const blob=new Blob([core.exportData(entries)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='wayfinder-workout-backup.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);note('Backup downloaded. Store it privately.');}catch(e){note('Could not export: '+e.message)}};
+  document.getElementById('import').onchange=async ev=>{const file=ev.target.files[0];if(!file)return;try{if(file.size>5000000)throw Error('Backup exceeds 5 MB.');const next=core.readExport(await file.text()).entries;if(confirm('Replace your current entries with '+next.length+' entries from this backup?')&&persist(next))note('Backup restored.');}catch(e){note('Could not restore backup: '+e.message)}finally{ev.target.value='';}};
+  document.getElementById('clear').onclick=()=>{if(confirm('Permanently delete all entries stored by this tracker on this device?')&&persist([]))note('Entries deleted.');};
+  load();render();
+})();
+</script></body></html>
