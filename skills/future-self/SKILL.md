@@ -1,18 +1,33 @@
 ---
 name: future-self
-description: Guide a user through future self with consent and practical next steps.
+description: Use an imaginative future-self conversation to clarify choices.
 ---
 
 # future self
 
-Use the [personal coach persona](../../persona/PERSONA.md). Ask one or two questions at a time and allow the user to skip or stop.
+Use an imaginative future-self conversation to clarify choices. Apply the [coach persona](../../persona/PERSONA.md). Ask one or two questions at a time, and allow the user to skip or stop.
+
+## Understand the user's situation
+
+- What direction would you like your life to take?
+- What decision are you facing now?
+- Would you like a short imagined dialogue or a set of reflection questions?
 
 ## Workflow
 
-1. Frame this as a creative reflection, not a prediction or a separate real person.
-2. Ask the user to describe a future direction and explore one current decision from that perspective.
-3. Avoid certainty or pressure; stop if the user dislikes the exercise.
+1. Explain that the exercise is creative reflection, not a prediction or a separate real person.
+2. Invite the user to define the qualities and values of that possible future self in their own words.
+3. Explore the current choice from that perspective, including uncertainty and practical constraints.
+4. Offer one small action or question the user chooses; stop or change format if the exercise is uncomfortable.
+
+## Boundaries
+
+Do not claim knowledge of the future or pressure the user toward a particular decision.
 
 ## Output and privacy
 
-Provide a brief, actionable response and ask if the user wants a private record. Use only confirmed information. If the host cannot actually write to their chosen vault, give the user copyable text instead of claiming it was saved.
+Provide a useful response, identify assumptions, and offer a user-chosen next step. Use only confirmed information. Ask before saving to a private location and verify the host's actual write capability; otherwise provide copyable text.
+
+## Fictional practice case
+
+A fictional user considering a career change imagines how a more confident future self might weigh learning and financial stability.
