@@ -1,6 +1,6 @@
 # ChatGPT setup
 
-1. Open a new conversation or, if available to your account, create a Project. Copy the [coach persona](../persona/PERSONA.md) into the conversation or project instructions and say: “Help me set up Open Wayfinder. Start with one question.”
+1. Open a new conversation or, if available to your account, create a Project. Copy the [coach persona](../persona/PERSONA.md) into the conversation or project instructions, then add the contents of the [onboarding guide](../skills/onboarding/SKILL.md) and say: “Help me set up Open Wayfinder. Start with one question.”
 2. Add only information you want the provider to process. Use the [private profile template](../templates/soul.md) and check the provider's current privacy settings. Uploading a file does not automatically make it a live, writable vault.
 3. For business, copy the [assistant builder](../skills/business-assistant-builder/SKILL.md) into another conversation or project.
 
