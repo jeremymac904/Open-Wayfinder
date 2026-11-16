@@ -1,0 +1,10 @@
+name: Suggest an improvement
+description: Share an idea for Open Wayfinder.
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like to do?
+      description: Tell us who it helps and why. Do not include private information.
+    validations:
+      required: true
