@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Open Wayfinder | Check-in dashboard</title>
+<style>
+:root{color-scheme:dark}body{font:16px/1.5 system-ui,sans-serif;background:#101b23;color:#edf7f6;margin:0}main{max-width:960px;margin:auto;padding:1.5rem}
+.card{background:#1a2b34;border:1px solid #31505a;border-radius:14px;padding:1.2rem;margin:1.2rem 0}h1{margin-bottom:.2rem}p{color:#bfd2d3}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.8rem}label{display:block;font-weight:600}
+input,select,textarea,button{box-sizing:border-box;font:inherit;padding:.55rem;border-radius:7px}input,select,textarea{width:100%;background:#f7ffff;color:#15292b;border:1px solid #55737b}
+button{background:#45d9c7;color:#08262a;border:0;font-weight:700;cursor:pointer;margin:.5rem .4rem 0 0}.secondary{background:#dceceb}
+table{border-collapse:collapse;width:100%}td,th{text-align:left;padding:.45rem;border-bottom:1px solid #45616a}.scroll{overflow:auto}.metric{padding:.7rem;border:1px solid #43616a;border-radius:8px}.number{font-size:1.5rem;font-weight:700}#message{color:#a8f0e5;min-height:1.5em}
+</style></head><body><main>
+<h1>Your check-ins</h1><p>Notice patterns, celebrate wins and choose what to do next.</p>
+<div class="card"><strong>Private by default on this device:</strong> this dashboard stores entries in browser local storage. It is not encrypted or automatically backed up; anyone using this browser may see it, and clearing browser data can erase it. Export a backup and keep it private.</div>
+<form id="checkin" class="card"><h2>Add a check-in</h2><p>All ratings are optional. A higher stress number means more stress.</p>
+<div class="grid"><label>Date<input type="date" name="date" required></label>
+<label>Mood<input type="number" name="mood" min="1" max="10" step="1" placeholder="1–10"></label>
+<label>Energy<input type="number" name="energy" min="1" max="10" step="1" placeholder="1–10"></label>
+<label>Stress<input type="number" name="stress" min="1" max="10" step="1" placeholder="1–10"></label>
+<label>Connection<input type="number" name="connection" min="1" max="10" step="1" placeholder="1–10"></label>
+<label>Confidence<input type="number" name="confidence" min="1" max="10" step="1" placeholder="1–10"></label></div>
+<label>What went well or matters today?<textarea name="note" rows="3" maxlength="2000"></textarea></label><button type="submit">Save check-in</button></form>
+<p id="message" role="status" aria-live="polite"></p>
+<section class="card"><h2>Patterns over time</h2><label>Ending date<input id="asof" type="date"></label><label>Period<select id="window"><option value="7">Last 7 days</option><option value="14">Last 14 days</option><option value="30">Last 30 days</option></select></label>
+<p id="days"></p><div id="summary" class="grid"></div><p>Each value is the average of available ratings in the selected period; blank days and missing ratings are not zeros. Stress is shown separately, with higher meaning more stress. These numbers do not diagnose or establish causes.</p></section>
+<section class="card"><h2>Saved check-ins</h2><div class="scroll"><table><thead><tr><th>Date</th><th>Mood</th><th>Energy</th><th>Stress</th><th>Connection</th><th>Confidence</th><th>Note</th><th>Action</th></tr></thead><tbody id="entries"></tbody></table></div>
+<button id="export" type="button">Export backup</button><label for="import">Restore backup (replaces current data after confirmation)</label><input id="import" type="file" accept=".json,application/json">
+<button id="clear" type="button" class="secondary">Delete all check-ins</button></section>
+<p>This is a reflection tool, not medical or mental-health care. In immediate danger, contact local emergency services. In the U.S., 988 is available for mental-health crises.</p>
+</main><script src="dashboard-core.js"></script><script>
+(()=>{
+  const core=window.WayfinderDashboard,key='open-wayfinder-checkins-v1',form=document.getElementById('checkin'),msg=document.getElementById('message'),tbody=document.getElementById('entries'),summary=document.getElementById('summary'),asof=document.getElementById('asof'),period=document.getElementById('window');
+  let entries=[];
+  const localToday=()=>{const d=new Date();return [d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-')};
+  function note(text){msg.textContent=text}
+  function save(next){try{localStorage.setItem(key,core.exportData(next));entries=next;render();return true;}catch(e){note('Could not save. Check browser storage permissions or available space.');return false;}}
+  function cell(row,text){const td=document.createElement('td');td.textContent=text;row.appendChild(td);}
+  function render(){
+    tbody.replaceChildren();[...entries].sort((a,b)=>b.date.localeCompare(a.date)).forEach(e=>{const row=document.createElement('tr');cell(row,e.date);for(const k of core.metrics)cell(row,e[k]===null?'—':String(e[k]));cell(row,e.note);const td=document.createElement('td'),b=document.createElement('button');b.type='button';b.className='secondary';b.textContent='Delete';b.setAttribute('aria-label','Delete check-in '+e.date);b.onclick=()=>{if(confirm('Delete this check-in?')&&save(entries.filter(x=>x.date!==e.date)))note('Check-in deleted.')};td.appendChild(b);row.appendChild(td);tbody.appendChild(row)});
+    try{const s=core.summary(entries,asof.value||localToday(),Number(period.value));document.getElementById('days').textContent=s.days+' day(s) recorded in this period.';summary.replaceChildren();for(const k of core.metrics){const div=document.createElement('div'),title=document.createElement('div'),n=document.createElement('div'),detail=document.createElement('small');div.className='metric';title.textContent=k==='stress'?'Stress (higher = more)':k[0].toUpperCase()+k.slice(1);n.className='number';n.textContent=s[k].mean===null?'—':String(s[k].mean)+'/10';detail.textContent=s[k].count+' rating(s)';div.appendChild(title);div.appendChild(n);div.appendChild(detail);summary.appendChild(div)}}catch(e){note(e.message)}
+  }
+  form.addEventListener('submit',ev=>{ev.preventDefault();try{const value=core.makeEntry(Object.fromEntries(new FormData(form)));if(entries.some(e=>e.date===value.date)&&!confirm('Replace the existing check-in for '+value.date+'?'))return;if(save(core.upsert(entries,value))){form.reset();note('Check-in saved on this device.')}}catch(e){note(e.message)}});
+  asof.onchange=render;period.onchange=render;
+  document.getElementById('export').onclick=()=>{try{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([core.exportData(entries)],{type:'application/json'}));a.download='wayfinder-checkins-backup.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);note('Backup downloaded. Store it privately.')}catch(e){note('Export failed: '+e.message)}};
+  document.getElementById('import').onchange=async ev=>{const file=ev.target.files[0];if(!file)return;try{if(file.size>5000000)throw Error('Backup exceeds 5 MB.');const next=core.readExport(await file.text()).entries;if(confirm('Replace current check-ins with '+next.length+' imported entries?')&&save(next))note('Backup restored.')}catch(e){note('Restore failed: '+e.message)}finally{ev.target.value=''}};
+  document.getElementById('clear').onclick=()=>{if(confirm('Permanently delete all check-ins from this browser?')&&save([]))note('Check-ins deleted.')};
+  asof.value=localToday();try{const saved=localStorage.getItem(key);entries=saved?core.readExport(saved).entries:[]}catch(e){note('Could not read local data. Check browser settings or restore a backup.')}render();
+})();
+</script></body></html>
