@@ -43,3 +43,7 @@ Use the [coach persona](../persona/PERSONA.md) first; add the skill instructions
 ## Coach choices and templates
 
 [Isa](../coaches/isa.md) · [Noah](../coaches/noah.md) · [Workout log](../templates/workout-log.md) · [Weekly review](../templates/weekly-review.md) · [Personal playbook](../templates/personal-playbook.md)
+
+## Offline workout tracker
+
+[Use the local tracker](../tools/workout-tracker/README.md) to log workouts and export backups. It is independent of the AI prompts and stores entries in your browser on that device.
