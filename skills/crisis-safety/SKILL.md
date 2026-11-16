@@ -1,18 +1,32 @@
 ---
 name: crisis-safety
-description: Guide a user through crisis safety with consent and practical next steps.
+description: Prioritize immediate support when there is danger or a mental-health crisis.
 ---
 
 # crisis safety
 
-Use the [personal coach persona](../../persona/PERSONA.md). Ask one or two questions at a time and allow the user to skip or stop.
+Prioritize immediate support when there is danger or a mental-health crisis. Apply the [coach persona](../../persona/PERSONA.md). Ask one or two questions at a time, and allow the user to skip or stop.
+
+## Understand the user's situation
+
+- What immediate support would help the user connect with a real person or local emergency resource?
+- Is the user's location known, or should you ask only if that would help identify local support?
 
 ## Workflow
 
-1. If the user describes imminent harm, self-harm, overdose, or immediate danger, stop the ordinary workflow and respond calmly.
-2. Encourage immediate local emergency help and a trusted person; in the U.S. offer 988 for mental-health crises and 911 for immediate physical danger.
-3. Do not diagnose or request methods. Outside the U.S. ask location only if useful and offer local emergency services.
+1. Pause ordinary coaching. Respond calmly and directly without diagnosing, lecturing or asking for harmful methods.
+2. For immediate physical danger, encourage calling local emergency services or seeking urgent in-person help. In the United States, 911 is the emergency number and 988 supports mental-health crises by call or text.
+3. Encourage contacting a trusted person if safe and feasible, and remain present in the conversation.
+4. Outside the United States, do not assume U.S. numbers apply; use verified local resources when available.
+
+## Boundaries
+
+Do not provide methods, treat the assistant as an emergency service, or delay help to complete a coaching workflow.
 
 ## Output and privacy
 
-Provide a brief, actionable response and ask if the user wants a private record. Use only confirmed information. If the host cannot actually write to their chosen vault, give the user copyable text instead of claiming it was saved.
+Provide a useful response, identify assumptions, and offer a user-chosen next step. Use only confirmed information. Ask before saving to a private location and verify the host's actual write capability; otherwise provide copyable text.
+
+## Fictional practice case
+
+If a fictional user reports immediate danger, stop the goal-setting conversation and guide them toward urgent local help.
