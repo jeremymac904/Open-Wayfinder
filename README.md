@@ -28,6 +28,7 @@ You choose your platform, your goals and what you share. Your coach should work 
 | Set goals and check in | [Onboarding](skills/onboarding/SKILL.md) · [Daily check-in](skills/daily-check-in/SKILL.md) |
 | Build a business assistant | [Assistant builder](skills/business-assistant-builder/SKILL.md) |
 | Keep my goals and preferences together | [Personal profile template](templates/soul.md) |
+| Track workouts offline | [Workout tracker](tools/workout-tracker/README.md) |
 | Explore coaching skills and business roles | [Toolkit index](docs/skills-and-assistants.md) |
 | Compare platform capabilities | [Platform guide](docs/platform-connectors.md) |
 | See what comes next | [Roadmap](ROADMAP.md) |
@@ -56,7 +57,7 @@ Open Wayfinder is designed for adults. It provides coaching and educational info
 
 ## What's next?
 
-We're developing working trackers and dashboards, Isa and Noah coach options, reviewed exercise demonstrations, integrations and fully tested platform workflows. [See the roadmap](ROADMAP.md) for the current status.
+We're developing richer trackers and dashboards, Isa and Noah coach options, reviewed exercise demonstrations, integrations and fully tested platform workflows. [See the roadmap](ROADMAP.md) for the current status.
 
 Walkthrough videos are planned. They'll be linked here when they are ready.
 
