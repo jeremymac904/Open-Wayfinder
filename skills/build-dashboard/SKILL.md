@@ -1,11 +1,22 @@
 ---
 name: build-dashboard
-description: Create a private dashboard from user-confirmed data.
+description: Create and explain a private dashboard from user-confirmed data.
 ---
 
 # Build a dashboard
 
-1. Ask which measures, dates, units and private source the user wants. Obtain permission to read relevant logs. Do not fabricate records or imply access.
-2. Verify the current host supports the desired output; if not, provide an editable table or a local file template.
-3. Show missing values as missing, not zero. Stress is reverse-oriented relative to positive ratings. Avoid health diagnoses or unsupported causal claims.
-4. Show a preview for review. Save only if the destination is writable and authorized; otherwise provide an exportable result. Keep personal data out of public repositories.
+Ask what the user wants to understand, which data sources and measures may be used, which date range is relevant, and where they want to view it. Obtain permission before reading a private source.
+
+## Choose the right option
+
+- For mood, energy, stress, connection and confidence, start with the [offline check-in dashboard](../../tools/check-in-dashboard/README.md).
+- For workouts, use the separate [offline workout tracker](../../tools/workout-tracker/README.md).
+- For another platform, verify current capabilities and permissions before offering a Sheets, Notion or other host-specific workflow. Otherwise produce an editable table or a local-file specification.
+
+The local tools are separate: they do not share records with each other or an AI host automatically.
+
+## Build and review
+
+Use actual user-provided or authorized data only. Show date windows, units, source, sample size and missing data. A missed day is not a zero. Show stress separately because a higher score indicates more stress. Do not average opposing scales into a single wellness score or imply a diagnosis. Present associations as questions, not proven causes.
+
+Preview the result and ask the user to review it. Save or update only when a destination is writable and authorized; verify the result. Otherwise provide a copyable or exportable output. Do not put the user's records in a public repository.
