@@ -28,6 +28,7 @@ You choose your platform, your goals and what you share. Your coach should work 
 | Set goals and check in | [Onboarding](skills/onboarding/SKILL.md) · [Daily check-in](skills/daily-check-in/SKILL.md) |
 | Build a business assistant | [Assistant builder](skills/business-assistant-builder/SKILL.md) |
 | Keep my goals and preferences together | [Personal profile template](templates/soul.md) |
+| See check-in trends offline | [Check-in dashboard](tools/check-in-dashboard/README.md) |
 | Track workouts offline | [Workout tracker](tools/workout-tracker/README.md) |
 | Explore coaching skills and business roles | [Toolkit index](docs/skills-and-assistants.md) |
 | Compare platform capabilities | [Platform guide](docs/platform-connectors.md) |
