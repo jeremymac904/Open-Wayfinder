@@ -1,26 +1,34 @@
 ---
 name: business-assistant-builder
-description: Create an editable business assistant for a user's role, goals, tools and boundaries.
+description: Create and test a portable business assistant with user-defined responsibilities and actual tool permissions.
 ---
 
 # Business assistant builder
 
-Use these instructions in an AI conversation to design an assistant for marketing, operations, sales, research, or another user-selected role.
+Use this skill with an AI host to help the user design a useful assistant, from a simple copyable prompt to a connected workflow when supported. Start with one assistant. Ask one or two questions at a time, reflect answers and accept skips.
 
-## Conversation
+## 1. Understand the work
 
-Ask one or two questions at a time. Learn what the user does, the task they want help with, desired results and tone, what tools they use, and relevant privacy or professional restrictions. Offer reasonable examples without assuming access to their business or accounts.
+Ask what the user does, who they serve and the recurring task or outcome they want help with. Clarify inputs, the desired deliverable, tone, tools, deadlines, relevant workplace rules and what information is private. Ask for examples only when useful. Do not ask for passwords, full customer records or sensitive data unnecessarily.
 
-## Deliver an editable assistant
+## 2. Design the assistant
 
-Using [the assistant template](../../templates/business-assistant.md), produce:
+Produce an editable assistant specification using [the template](../../templates/business-assistant.md):
 
-1. A name and clear purpose.
-2. Responsibilities, inputs, expected outputs and examples.
-3. Knowledge the user should provide, with sensitive data minimized.
-4. Proposed tools and permissions, explicitly labeled unverified until checked.
-5. Approval rules, limitations, a way to handle uncertainty and a manual fallback.
-6. Platform setup instructions only where known; otherwise say what needs verification.
-7. A small fictional test task and expected result for the user to run.
+- **Role and outcome:** one sentence on who it helps and what success looks like.
+- **Responsibilities and exclusions:** specific tasks and clear limits.
+- **Context and voice:** user-provided facts, audience, style and approved resources; identify gaps.
+- **Workflow:** trigger, inputs, steps, output, review, owner, exceptions and follow-up.
+- **Tools:** list proposed tools separately from those confirmed available, connected and tested; name intended read and write actions.
+- **Approvals:** define when an action is drafted, awaiting approval, attempted, confirmed or failed; ask before external messages, publication, spending, deletion, account connections or permission expansion.
+- **Privacy and fallback:** keep personal and business information separate unless the user opts in; provide a manual workflow if an integration is unavailable.
 
-Do not pretend to create a bot, connect a tool, send a message or save a file without evidence. Ask for authorization before external communications, publishing, spending, deletion, connecting accounts or changing permissions. Follow workplace rules, verify factual claims and avoid fabricated results. Keep the user's business context separate from personal coaching unless the user chooses to share it.
+## 3. Give a working setup path
+
+Give the complete prompt as copyable text. Point to the user's chosen [platform guide](../../docs/platform-connectors.md) and check its current official docs for the relevant setup. Never claim a bot has been created or an account connected based on a prompt alone. If a user authorizes and the host supports it, make the actual connection or file change within its permitted scope, then verify the result. Separate read from write tests.
+
+## 4. Test and improve
+
+Run a small fictional scenario against the generated prompt. Check that the assistant asks for missing facts, produces the requested output, uses the right voice, states tool limitations and does not send or publish without authorization. Show the result and revise with the user. Mark platform testing as unverified if not actually run.
+
+Starter roles: [marketing](../../assistants/marketing.md), [operations](../../assistants/operations.md), [sales](../../assistants/sales.md), [research](../../assistants/research.md). The user may create any other role or a team of assistants with explicit handoffs.
