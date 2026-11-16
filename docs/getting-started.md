@@ -8,7 +8,7 @@ Open the AI service or local model you prefer. Copy the entire [coach persona](.
 
 > Help me set up Open Wayfinder. Start with one question.
 
-Follow the [onboarding guide](../skills/onboarding/SKILL.md). You can skip any question.
+Copy the [onboarding guide](../skills/onboarding/SKILL.md) into the conversation too. A model cannot follow a linked skill file unless you provide its contents or it has verified access to that file. You can skip any question.
 
 ## 2. Keep your profile private
 
@@ -18,7 +18,7 @@ A file in a public GitHub repository is public. The included `.gitignore` reduce
 
 ## 3. Check in
 
-Use the [daily check-in](../skills/daily-check-in/SKILL.md) and [weekly review](../skills/weekly-review/SKILL.md) as conversation guides. To build a work assistant, use the [business assistant builder](../skills/business-assistant-builder/SKILL.md).
+Copy the [daily check-in](../skills/daily-check-in/SKILL.md) or [weekly review](../skills/weekly-review/SKILL.md) instructions into your conversation as needed. For a work assistant, copy the [business assistant builder](../skills/business-assistant-builder/SKILL.md) and [assistant template](../templates/business-assistant.md) into a separate conversation. A prompt referencing a file does not make its contents available automatically.
 
 ## What to expect
 
