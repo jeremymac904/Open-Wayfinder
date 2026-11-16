@@ -1,0 +1,13 @@
+const assert = require('node:assert/strict');
+const t = require('./tracker-core.js');
+const input = {date:'2026-11-16', exercise:'Row', sets:'3', reps:'10', weight:'25', unit:'lb', loadType:'per hand', notes:''};
+const entry = t.makeEntry(input);
+assert.equal(entry.sets,3);
+assert.equal(entry.weight,25);
+assert.throws(()=>t.makeEntry({...input,sets:'-1'}));
+assert.throws(()=>t.makeEntry({...input,date:'not a date'}));
+assert.throws(()=>t.readExport('{"version":1,"entries":[{"date":"bad"}]}'));
+assert.deepEqual(t.readExport(t.exportData([entry])).entries,[entry]);
+assert.deepEqual(t.removeEntry([entry],0),[]);
+assert.equal(t.removeEntry([entry],9).length,1);
+console.log('Workout entry, validation, export/import and deletion checks passed');
