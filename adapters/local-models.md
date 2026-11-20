@@ -1,6 +1,6 @@
 # Local model setup
 
-Last checked against official Ollama and Open WebUI documentation: 2026-11-18.
+Targeted documentation check: 2026-11-20. Previous full review: 2026-11-18.
 
 ## Basic install
 
@@ -19,6 +19,8 @@ Open WebUI v0.6.31+ documents native MCP over Streamable HTTP. MCP setup is admi
 A “local” setup is not fully local if you connect a cloud model, web search, telemetry or an external MCP service. Check network behavior and storage before putting sensitive records into it.
 
 Current authority: [Ollama tool calling](https://docs.ollama.com/capabilities/tool-calling), [Open WebUI essentials](https://docs.openwebui.com/getting-started/essentials/), [MCP](https://docs.openwebui.com/features/extensibility/mcp/), [memory](https://docs.openwebui.com/features/chat-conversations/memory/), and [Notes](https://docs.openwebui.com/features/notes/).
+
+For local-only inference, set `OLLAMA_NO_CLOUD=1`, restart Ollama and check its log for `Ollama cloud disabled: true`. This disables Ollama cloud models and web search. Check Open WebUI’s external connections separately. [Ollama local FAQ](https://docs.ollama.com/faq)
 
 ## Scheduling
 
