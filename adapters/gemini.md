@@ -1,6 +1,6 @@
 # Gemini setup
 
-Last checked against official documentation: 2026-11-18.
+Targeted documentation check: 2026-11-20. Previous full review: 2026-11-18.
 
 ## Use a Skill for personal accounts
 
@@ -12,13 +12,13 @@ Google's documented personal-account migration is now active: Gems became read-o
 4. Keep the [personal profile](../templates/soul.md) private and share only what you choose.
 5. Create a separate Skill or conversation from the [business assistant builder](../skills/business-assistant-builder/SKILL.md) for work.
 
-Google says existing personal Gems will be recreated as Skills, but account migration and result quality still need to be checked. Workspace business, nonprofit and education transitions are documented for 2027, so follow the target account's current interface.
+Google says existing personal Gems will be recreated as Skills, but account migration and result quality still need to be checked. For adult personal accounts, compare the Gem and its replacement skill before December 17, 2026. Download missing originals while the Gem is accessible. Google excludes GitHub files, audio, video, archives and legacy Office formats from transfer. If attachments exceed 100 MB per skill, Google drops the largest first. [Migration details](https://support.google.com/gemini/answer/18560919?hl=en) Google lists March 2027 for Workspace business, enterprise and nonprofit accounts, and June 2027 for education.
 
 ## Tools and scheduling limits
 
 Skills can use some Connected Apps, but currently do not work with Canvas or Deep Research, and most former Gem default tools are not yet supported. A connected Drive file is not automatically a live writable vault; verify each app's actual read/write behavior.
 
-Scheduled actions are gradually available, require Activity to be on, allow up to 10 active actions and may prepare results ahead of delivery. Gemini Tasks and their schedules are a separate subscription-dependent feature.
+Scheduled actions are gradually available, require Gemini History to be on, allow up to 10 active actions and may prepare results ahead of delivery. Gemini Tasks and their schedules are a separate subscription-dependent feature.
 
 Current authority: [Skills](https://support.google.com/gemini/answer/17094296), [Gems-to-Skills transition](https://support.google.com/gemini/answer/18560919), [scheduled actions](https://support.google.com/gemini/answer/16316416), and [Tasks](https://support.google.com/gemini/answer/17094507).
 
