@@ -1,6 +1,6 @@
 # ChatGPT setup
 
-Last checked against official documentation: 2026-11-18.
+Targeted documentation check: 2026-11-20. Previous full review: 2026-11-18.
 
 ## Basic install
 
@@ -12,7 +12,7 @@ Last checked against official documentation: 2026-11-18.
 
 ## Optional connections
 
-ChatGPT apps can search, sync, display interactive interfaces or perform actions depending on the app, plan and permissions. OpenAI-built apps are documented as search-only today. Full custom MCP write/modify support is beta on Business and Enterprise/Edu on web; Pro custom MCP is limited to read/fetch. Installing a plugin or connecting an app does not create a schedule or prove write access.
+ChatGPT apps can search, sync, display interactive interfaces or perform actions depending on the app, plan and permissions. The [Outlook Calendar app](https://help.openai.com/en/articles/12512241-outlook-email-and-calendar-apps-in-chatgpt) supports creating and updating shared calendar events when Microsoft permissions and workspace settings allow it. Full custom MCP write/modify support is beta on Business and Enterprise/Edu on web; Pro custom MCP is limited to read/fetch. Installing a plugin or connecting an app does not create a schedule or prove write access.
 
 Before depending on a connector, test one permitted read, one authorized reversible write, a read-back, and revocation. Do not use private coaching data for the test.
 
