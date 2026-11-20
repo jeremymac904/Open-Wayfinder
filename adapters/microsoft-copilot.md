@@ -1,6 +1,6 @@
 # Microsoft 365 Copilot setup
 
-Last checked against official documentation: 2026-11-18.
+Targeted documentation check: 2026-11-20. Previous full review: 2026-11-18.
 
 ## Basic install
 
@@ -12,9 +12,9 @@ Last checked against official documentation: 2026-11-18.
 
 Microsoft 365 Copilot connectors bring external content into Copilot search and grounding. They are read-only by default. A write to an external system requires an action connector, Power Platform connector or API plugin, plus the necessary license, administrator policy and source-system permission.
 
-Synced connectors copy/index content into Microsoft 365; federated connectors retrieve from the source. These are different privacy and freshness models. The connector license matrix says basic Microsoft 365 can expose synced connector data in Microsoft Search, while Copilot grounding/federated use requires an eligible Copilot add-on/E7 or a qualifying agent license.
+Synced connectors copy/index content into Microsoft 365; federated connectors retrieve from the source. These are different privacy and freshness models. The connector license matrix says basic Microsoft 365 can expose synced connector data in Microsoft Search, while Copilot grounding requires the add-on or E7. Federated connectors require a Microsoft 365 Copilot add-on or E7. Copilot Studio and pay-as-you-go support synced content in agents only.
 
-Custom agents can combine knowledge connectors with actions through Copilot Studio or Microsoft 365 agent tooling. Scheduling or event automation depends on Copilot Studio, Power Automate or another configured workflow; a knowledge connector alone is not a scheduler.
+Custom agents can combine knowledge connectors with actions through Copilot Studio or Microsoft 365 agent tooling. Licensed users can [schedule a recurring prompt in Copilot Chat](https://support.microsoft.com/en-us/microsoft-365-copilot/schedule-your-most-used-copilot-prompts) on web or desktop. Microsoft describes the Task Hub interface as rolling out.
 
 Current authority: [connector overview](https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview), [connector licensing](https://learn.microsoft.com/microsoftsearch/licensing), and [extensibility FAQ](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/faq).
 
