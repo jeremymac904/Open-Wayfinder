@@ -1,6 +1,6 @@
 # Claude setup
 
-Targeted documentation check: 2026-11-20. Previous full review: 2026-11-18.
+Targeted documentation check: 2026-11-23. Previous full review: 2026-11-18.
 
 ## Basic install
 
@@ -15,6 +15,8 @@ Targeted documentation check: 2026-11-20. Previous full review: 2026-11-18.
 Claude supports Skills on Free through Enterprise when code execution is enabled. You can package an Open Wayfinder workflow as a skill folder with `SKILL.md` and its referenced resources, review it, then add it through Customize > Skills. A skill supplies instructions and resources; it does not grant a connector, credential or external write permission.
 
 ## Connectors, memory and scheduling
+
+In Cowork, a project can also use memory from ordinary chats. For a work assistant that should stay separate from personal coaching, switch off **Use account memory** on the project’s Memory page. [Cowork project memory](https://support.claude.com/en/articles/14116274-organize-your-tasks-with-projects-in-claude-cowork)
 
 Claude directory connectors and remote custom MCP connectors can retrieve data or take actions according to their declared tools and the permissions you grant. Remote custom MCP is documented across plans, with Free limited to one. Project uploads are stored knowledge, not live writable files. Paid Projects can automatically use RAG for more knowledge capacity.
 
