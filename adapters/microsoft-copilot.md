@@ -1,6 +1,6 @@
 # Microsoft 365 Copilot setup
 
-Targeted documentation check: 2026-11-20. Previous full review: 2026-11-18.
+Targeted documentation check: 2026-11-23. Previous full review: 2026-11-18.
 
 ## Basic install
 
@@ -10,7 +10,9 @@ Targeted documentation check: 2026-11-20. Previous full review: 2026-11-18.
 
 ## Connectors, agents and write actions
 
-Microsoft 365 Copilot connectors bring external content into Copilot search and grounding. They are read-only by default. A write to an external system requires an action connector, Power Platform connector or API plugin, plus the necessary license, administrator policy and source-system permission.
+Microsoft lists reusable skills in Copilot Chat as generally available. Users can select a skill or let Chat choose one. [November release notes](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/whats-new#november-2026)
+
+Synced connectors supply indexed knowledge. A federated MCP connector can also create, update or delete records when its publisher exposes those tools and the user has source-system permission. Writes initially prompt for approval. Power Platform connectors and API plugins offer other action paths. [Federated connector actions](https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview#write-update-and-delete-actions)
 
 Synced connectors copy/index content into Microsoft 365; federated connectors retrieve from the source. These are different privacy and freshness models. The connector license matrix says basic Microsoft 365 can expose synced connector data in Microsoft Search, while Copilot grounding requires the add-on or E7. Federated connectors require a Microsoft 365 Copilot add-on or E7. Copilot Studio and pay-as-you-go support synced content in agents only.
 
