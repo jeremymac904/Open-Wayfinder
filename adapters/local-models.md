@@ -1,6 +1,6 @@
 # Local model setup
 
-Targeted documentation check: 2026-11-20. Previous full review: 2026-11-18.
+Targeted documentation check: 2026-11-23. Previous full review: 2026-11-18.
 
 ## Basic install
 
@@ -24,7 +24,7 @@ For local-only inference, set `OLLAMA_NO_CLOUD=1`, restart Ollama and check its 
 
 ## Scheduling
 
-Open Wayfinder does not ship a local scheduler. Add a separate scheduler/workflow engine and test it if proactive runs are required.
+Open WebUI can run recurring check-ins with its built-in Automations. The instance must enable Automations and ordinary users need the Automations permission. Each run creates a chat using the chosen model and its tools. [Automations](https://docs.openwebui.com/features/chat-conversations/chat-features/automations/) In User Menu → Automations, choose the model, enter a check-in prompt and set the schedule. Use Run Now to check the resulting chat.
 
 **Manual ritual:** Open a conversation for morning and evening check-ins.
 
