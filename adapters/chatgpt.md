@@ -1,6 +1,6 @@
 # ChatGPT setup
 
-Targeted documentation check: 2026-11-20. Previous full review: 2026-11-18.
+Targeted documentation check: 2026-11-23. Previous full review: 2026-11-18.
 
 ## Basic install
 
@@ -9,6 +9,10 @@ Targeted documentation check: 2026-11-20. Previous full review: 2026-11-18.
 3. Add the contents of the [onboarding skill](../skills/onboarding/SKILL.md), then say: “Help me set up Open Wayfinder. Start with one question.”
 4. Keep your [private profile](../templates/soul.md) outside this public repository and share only what you want the provider to process.
 5. For business, use the [business assistant builder](../skills/business-assistant-builder/SKILL.md) in a separate Project or conversation.
+
+## Existing custom GPTs
+
+OpenAI schedules standard custom GPT retirement for December 11, 2026. FedRAMP and qualifying Enterprise workspaces with approved deferrals have until February 28, 2027. Check the workspace notice. [Migration FAQ](https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq) When migration is available in My GPTs, it uses the latest published instructions and reference files. The replacement plugin starts private. Rebuild any custom actions separately and compare results using a familiar prompt before switching.
 
 ## Optional connections
 
