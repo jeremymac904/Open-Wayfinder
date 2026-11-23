@@ -1,6 +1,6 @@
 # Gemini setup
 
-Targeted documentation check: 2026-11-20. Previous full review: 2026-11-18.
+Targeted documentation check: 2026-11-23. Previous full review: 2026-11-18.
 
 ## Use a Skill for personal accounts
 
@@ -15,6 +15,8 @@ Google's documented personal-account migration is now active: Gems became read-o
 Google says existing personal Gems will be recreated as Skills, but account migration and result quality still need to be checked. For adult personal accounts, compare the Gem and its replacement skill before December 17, 2026. Download missing originals while the Gem is accessible. Google excludes GitHub files, audio, video, archives and legacy Office formats from transfer. If attachments exceed 100 MB per skill, Google drops the largest first. [Migration details](https://support.google.com/gemini/answer/18560919?hl=en) Google lists March 2027 for Workspace business, enterprise and nonprofit accounts, and June 2027 for education.
 
 ## Tools and scheduling limits
+
+On eligible accounts, the **Memory** switch under **Settings → Personal Intelligence** controls personalization from past Gemini chats. Keep the authoritative profile in your chosen file. [Gemini memory](https://support.google.com/gemini/answer/16598469)
 
 Skills can use some Connected Apps, but currently do not work with Canvas or Deep Research, and most former Gem default tools are not yet supported. A connected Drive file is not automatically a live writable vault; verify each app's actual read/write behavior.
 
