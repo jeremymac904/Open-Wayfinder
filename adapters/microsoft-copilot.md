@@ -1,6 +1,6 @@
 # Microsoft 365 Copilot setup
 
-Targeted documentation check: 2026-11-23. Previous full review: 2026-11-18.
+Targeted documentation check: 2026-11-25. Previous full review: 2026-11-18.
 
 ## Basic install
 
@@ -19,6 +19,8 @@ Synced connectors copy/index content into Microsoft 365; federated connectors re
 Custom agents can combine knowledge connectors with actions through Copilot Studio or Microsoft 365 agent tooling. Licensed users can [schedule a recurring prompt in Copilot Chat](https://support.microsoft.com/en-us/microsoft-365-copilot/schedule-your-most-used-copilot-prompts) on web or desktop. Microsoft describes the Task Hub interface as rolling out.
 
 Current authority: [connector overview](https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview), [connector licensing](https://learn.microsoft.com/microsoftsearch/licensing), and [extensibility FAQ](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/faq).
+
+Personal skills accept a standalone `SKILL.md` or skill ZIP. In tenants using Microsoft Purview Information Barriers, Copilot Chat excludes both personal and plugin-distributed skills. [Skill requirements](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/build-copilot-chat-skills)
 
 **Manual ritual:** Start a conversation for a morning check-in or evening review.
 
