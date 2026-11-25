@@ -1,6 +1,6 @@
 # ChatGPT setup
 
-Targeted documentation check: 2026-11-23. Previous full review: 2026-11-18.
+Targeted documentation check: 2026-11-25. Previous full review: 2026-11-18.
 
 ## Basic install
 
@@ -25,6 +25,8 @@ Before depending on a connector, test one permitted read, one authorized reversi
 Scheduled tasks can be recurring or event-triggered where eligible, but a task created in a Project cannot access files uploaded to or stored in that Project. Active-task limits and event support vary by plan. A Project upload is context, not automatically a live writable vault.
 
 Use [Projects](https://help.openai.com/en/articles/10169521-projects-in-chatgpt), [apps](https://help.openai.com/en/articles/11487775-connected-apps-in-chatgpt), [custom MCP](https://help.openai.com/en/articles/12584461) and [scheduled tasks](https://help.openai.com/en/articles/10291617-scheduled-tasks-in-chatgpt) as the current authority.
+
+Project-only memory keeps conversations within the project and disables ChatGPT Work there. Shared projects automatically use this setting. [Project memory](https://help.openai.com/en/articles/10169521-projects-in-chatgpt) For an existing project, change Memory in Project settings. Allow a few hours for the change to take effect.
 
 **Manual ritual:** Start a morning conversation with “Let's check in” and an evening conversation with “Let's review today.”
 
