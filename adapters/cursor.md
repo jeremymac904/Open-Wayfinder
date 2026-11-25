@@ -1,6 +1,6 @@
 # Cursor and file-based agents
 
-Targeted documentation check: 2026-11-20. Previous full review: 2026-11-18.
+Targeted documentation check: 2026-11-25. Previous full review: 2026-11-18.
 
 ## Recommended install
 
@@ -19,6 +19,8 @@ Agent can read and edit files, run terminal commands and use configured MCP tool
 Cursor Automations can run Cloud Agents on schedules or events and can use selected MCP tools. The current pricing page places cloud agents and automations on Premium and higher. Do not assume a local chat, skill or rule runs on a schedule without an Automation or separate scheduler.
 
 Current authority: [Skills](https://cursor.com/docs/skills), [tools](https://cursor.com/docs/agent/overview), [MCP](https://cursor.com/docs/mcp), and [Automations](https://cursor.com/docs/cloud-agent/automations).
+
+A scheduled trigger can start without a repository. Select the repo explicitly if the run needs its skills or files. Cloud Agent usage bills to the creator under **Me** or to the team under **Service account**. [Triggers and billing](https://cursor.com/docs/cloud-agent/automations)
 
 **Manual ritual:** Open the workspace and ask for a morning check-in or evening review.
 
