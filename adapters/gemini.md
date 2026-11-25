@@ -1,6 +1,6 @@
 # Gemini setup
 
-Targeted documentation check: 2026-11-23. Previous full review: 2026-11-18.
+Targeted documentation check: 2026-11-25. Previous full review: 2026-11-18.
 
 ## Use a Skill for personal accounts
 
@@ -23,6 +23,8 @@ Skills can use some Connected Apps, but currently do not work with Canvas or Dee
 Scheduled actions are gradually available, require Gemini History to be on, allow up to 10 active actions and may prepare results ahead of delivery. Gemini Tasks and their schedules are a separate subscription-dependent feature.
 
 Current authority: [Skills](https://support.google.com/gemini/answer/17094296), [Gems-to-Skills transition](https://support.google.com/gemini/answer/18560919), [scheduled actions](https://support.google.com/gemini/answer/16316416), and [Tasks](https://support.google.com/gemini/answer/17094507).
+
+**Google Workspace developer integrations.** Google began rolling out its Workspace MCP servers on November 24. A compatible, authorized host can read and revise Drive files and edit Google Docs. Drive and Docs each list up to ten days for account availability. [Drive release notes](https://developers.google.com/workspace/drive/release-notes) · [Docs release notes](https://developers.google.com/workspace/docs/release-notes) The Standard tier includes 5,000 MCP requests per day for each product in each Cloud project, with no billing account required. Higher MCP quotas require Scaled enrollment, linked billing and a quota increase request. [Google quota guide](https://developers.google.com/workspace/guides/quota-usage-tiers) For the Gemini chat setup above, check the actions in its own Connected Apps settings.
 
 **Manual ritual:** Start a morning chat with “Let's check in” and an evening chat with “Let's review today.”
 
