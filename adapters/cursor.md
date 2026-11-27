@@ -1,6 +1,6 @@
 # Cursor and file-based agents
 
-Targeted documentation check: 2026-11-25. Previous full review: 2026-11-18.
+Targeted documentation check: 2026-11-27. Previous full review: 2026-11-18.
 
 ## Recommended install
 
@@ -13,6 +13,8 @@ Targeted documentation check: 2026-11-25. Previous full review: 2026-11-18.
 Cursor documents automatic discovery of Agent Skills from `.agents/skills/`, `.cursor/skills/`, user-level equivalents, and compatible Claude/Codex skill directories. Local personal skills do not automatically reach Cloud Agents; enable the documented sync option if desired. Cursor Automations do not load synced personal skills, so any skill required by an automation must be stored in the repository's `.cursor/skills/` folder.
 
 ## Tools, MCP and scheduling
+
+If a Cloud Agent cannot see an expected MCP server, check both the team policy and the selected environment. An environment can disable MCP entirely or allow specific servers. An empty allowlist inherits the servers the team permits. Individual cloud automation plans start at Premium, listed at US$30/month. [Cursor pricing](https://cursor.com/pricing) [Cloud Agents release notes](https://cursor.com/docs/release-notes/cloud-agents)
 
 Agent can read and edit files, run terminal commands and use configured MCP tools. MCP supports stdio, SSE and Streamable HTTP. Tool approval is on by default; auto-run expands risk and should only be used with reviewed tools.
 
