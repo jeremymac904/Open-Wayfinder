@@ -1,6 +1,6 @@
 # Claude setup
 
-Targeted documentation check: 2026-11-25. Previous full review: 2026-11-18.
+Targeted documentation check: 2026-11-27. Previous full review: 2026-11-18.
 
 ## Basic install
 
@@ -15,6 +15,8 @@ Targeted documentation check: 2026-11-25. Previous full review: 2026-11-18.
 Claude supports Skills on Free through Enterprise when code execution is enabled. You can package an Open Wayfinder workflow as a skill folder with `SKILL.md` and its referenced resources, review it, then add it through Customize > Skills. A skill supplies instructions and resources; it does not grant a connector, credential or external write permission.
 
 ## Connectors, memory and scheduling
+
+On paid Cowork plans, a scheduled task that reaches a connector set to **Always ask** can pause or finish without using it. For a briefing that depends on that source, check the run for the expected input before using the result. [Claude scheduled tasks](https://support.claude.com/en/articles/13854387-schedule-recurring-tasks-in-claude-cowork)
 
 In Cowork, a project can also use memory from ordinary chats. For a work assistant that should stay separate from personal coaching, switch off **Use account memory** on the project’s Memory page. [Cowork project memory](https://support.claude.com/en/articles/14116274-organize-your-tasks-with-projects-in-claude-cowork)
 
