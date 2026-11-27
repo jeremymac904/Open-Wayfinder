@@ -1,6 +1,6 @@
 # ChatGPT setup
 
-Targeted documentation check: 2026-11-25. Previous full review: 2026-11-18.
+Targeted documentation check: 2026-11-27. Previous full review: 2026-11-18.
 
 ## Basic install
 
@@ -11,6 +11,8 @@ Targeted documentation check: 2026-11-25. Previous full review: 2026-11-18.
 5. For business, use the [business assistant builder](../skills/business-assistant-builder/SKILL.md) in a separate Project or conversation.
 
 ## Existing custom GPTs
+
+Before migrating a custom GPT, publish any edits you want to keep. Migration locks the original for editing. Standard Chat cannot execute scripts bundled in the replacement plugin, even when it can read its reference files. If your assistant generates files, check a sample output before switching. [OpenAI migration FAQ](https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq)
 
 OpenAI schedules standard custom GPT retirement for December 11, 2026. FedRAMP and qualifying Enterprise workspaces with approved deferrals have until February 28, 2027. Check the workspace notice. [Migration FAQ](https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq) When migration is available in My GPTs, it uses the latest published instructions and reference files. The replacement plugin starts private. Rebuild any custom actions separately and compare results using a familiar prompt before switching.
 
