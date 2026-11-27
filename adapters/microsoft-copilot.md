@@ -1,6 +1,6 @@
 # Microsoft 365 Copilot setup
 
-Targeted documentation check: 2026-11-25. Previous full review: 2026-11-18.
+Targeted documentation check: 2026-11-27. Previous full review: 2026-11-18.
 
 ## Basic install
 
@@ -9,6 +9,8 @@ Targeted documentation check: 2026-11-25. Previous full review: 2026-11-18.
 3. Keep private coaching records outside shared Microsoft 365 locations unless you intentionally choose and control that storage.
 
 ## Connectors, agents and write actions
+
+Microsoft will retire legacy Power Platform scheduled prompts on December 31, 2026. To keep a briefing running, recreate its prompt and cadence as a scheduled task in Copilot before that date. Preview-era prompts may only appear in Power Automate. Licensed users can have 10 active schedules and 50 total. Prior results remain in Copilot chat history. [Microsoft migration guidance](https://learn.microsoft.com/en-us/copilot/manage/scheduled-prompts)
 
 Microsoft lists reusable skills in Copilot Chat as generally available. Users can select a skill or let Chat choose one. [November release notes](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/whats-new#november-2026)
 
