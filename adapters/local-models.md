@@ -1,6 +1,6 @@
 # Local model setup
 
-Targeted documentation check: 2026-11-25. Previous full review: 2026-11-18.
+Targeted documentation check: 2026-11-27. Previous full review: 2026-11-18.
 
 ## Basic install
 
@@ -23,6 +23,8 @@ Current authority: [Ollama tool calling](https://docs.ollama.com/capabilities/to
 For local-only inference, set `OLLAMA_NO_CLOUD=1`, restart Ollama and check its log for `Ollama cloud disabled: true`. This disables Ollama cloud models and web search. Check Open WebUI’s external connections separately. [Ollama local FAQ](https://docs.ollama.com/faq)
 
 ## Scheduling
+
+Scheduled runs follow the user's chat memory settings. With memory enabled, a run can use memory tools. With Memory System Context enabled, stored memories can also enter the prompt. Check these settings before using one local account for personal coaching and business briefings. [Open WebUI Automations](https://docs.openwebui.com/features/chat-conversations/chat-features/automations/)
 
 Open WebUI can run recurring check-ins with its built-in Automations. The instance must enable Automations and ordinary users need the Automations permission. Each run creates a chat using the chosen model and its tools. [Automations](https://docs.openwebui.com/features/chat-conversations/chat-features/automations/) In User Menu → Automations, choose the model, enter a check-in prompt and set the schedule. Use Run Now to check the resulting chat.
 
